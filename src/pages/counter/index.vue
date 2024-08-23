@@ -1,4 +1,9 @@
 <script setup lang="ts">
+useHead({
+  title: "Counter Page",
+  meta: [{ name: "description", content: "The counter page" }],
+});
+
 import MyCounter from "@/components/my-counter/my-counter.vue";
 </script>
 

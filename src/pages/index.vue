@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+  title: "Home Page",
+  meta: [{ name: "description", content: "The home page" }],
+});
+</script>
 
 <template>
   <div>
