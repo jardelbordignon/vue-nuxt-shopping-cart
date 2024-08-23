@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt-vuetify-pinia",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "nuxt": "^3.13.0",
-    "vue": "latest"
+    "vue": "^3.4.38"
+  },
+  "devDependencies": {
+    "eslint-plugin-vuetify": "^2.4.0",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vuetify": "^3.7.0"
   }
 }
