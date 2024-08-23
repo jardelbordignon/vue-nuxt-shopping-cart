@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // https://vuetifyjs.com/en/getting-started/installation/#manual-setup
-
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
@@ -16,6 +15,7 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }));
       });
     },
+    ["@pinia/nuxt", { disableVuex: true }],
   ],
   vite: {
     vue: {
