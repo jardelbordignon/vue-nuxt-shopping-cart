@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // https://vuetifyjs.com/en/getting-started/installation/#manual-setup
-import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+//import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 import type { PwaModuleOptions } from "@vite-pwa/nuxt";
 
 const pwa: PwaModuleOptions = {
@@ -63,28 +63,37 @@ const pwa: PwaModuleOptions = {
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   srcDir: "src/",
   build: {
-    transpile: ["vuetify"],
+    //  transpile: ["vuetify"],
   },
   modules: [
-    (_options, nuxt) => {
-      nuxt.hooks.hook("vite:extendConfig", (config) => {
-        // @ts-expect-error
-        config.plugins.push(vuetify({ autoImport: true }));
-      });
-    },
+    // (_options, nuxt) => { // vuetify
+    //   nuxt.hooks.hook("vite:extendConfig", (config) => {
+    //     // @ts-expect-error
+    //     config.plugins.push(vuetify({ autoImport: true }));
+    //   });
+    // },
     ["@pinia/nuxt", { disableVuex: true }],
     "@nuxt/test-utils/module",
     "@vite-pwa/nuxt",
   ],
   pwa,
-  vite: {
-    vue: {
-      template: {
-        transformAssetUrls,
-      },
-    },
-  },
+
+  // css: ["~/assets/css/main.css"], // tailwindcss
+  // postcss: {
+  //   plugins: {
+  //     tailwindcss: {},
+  //     autoprefixer: {},
+  //   },
+  // },
+
+  // vite: { // vuetify
+  //   vue: {
+  //     template: {
+  //       transformAssetUrls,
+  //     },
+  //   },
+  // },
 });

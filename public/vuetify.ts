@@ -1,3 +1,5 @@
+// mover para o diretorio src/plugins caso for usar vuetify
+
 // find icons in https://materialdesignicons.com/
 import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";

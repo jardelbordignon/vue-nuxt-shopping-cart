@@ -4,7 +4,7 @@ import MyCounter from "@/components/my-counter/my-counter.vue";
 
 <template>
   <div>
-    <v-icon icon="mdi-information" />
+    <!-- <v-icon icon="mdi-information" /> -->
     <h1>Counter Page</h1>
 
     <MyCounter />
