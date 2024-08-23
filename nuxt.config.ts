@@ -16,6 +16,7 @@ export default defineNuxtConfig({
       });
     },
     ["@pinia/nuxt", { disableVuex: true }],
+    '@nuxt/test-utils/module',
   ],
   vite: {
     vue: {
